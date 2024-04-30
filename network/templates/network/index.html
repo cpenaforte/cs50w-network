@@ -1,0 +1,22 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <div
+            id="app"
+            style="overflow-y: auto; height: calc(100vh - 57px);"
+            data-isauthenticated="{{ user.is_authenticated }}"
+            data-username="{{ user.username }}"
+            data-initpath="{{ path }}"
+        ></div>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            You must be logged in to view this page.
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/script.js' %}" type="module"></script>
+{% endblock %}

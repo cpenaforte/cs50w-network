@@ -1,0 +1,22 @@
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+}
+
+.nav-btn:active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:focus {
+    outline: none !important;
+}
+
+.btn-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-icon:active {
+    filter: drop-shadow(0 0 2px crimson);
+}
